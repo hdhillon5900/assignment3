@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Party Tickets Order Form</title>
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/main.css">
+
+		
+	</head>
+
+	<body>
+		<!-- header starts -->
+		<header>
+			<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+			<h2>The Halloween Store</h2>
+			<h3>For the little Goblin in all of us!</h3>
+		</header>
+		
+		<!-- navigation starts -->
+		<nav id="nav_menu">
+			<ul>
+				<li><a href="index.html" id="current">Home</a></li>
+				<li><a href="about_us.html">About Us</a>
+					<ul>						
+						<li><a href="our_history.html">Our History</a></li>
+						<li><a href="our_team.html">Our Team</a></li>
+					</ul>
+				</li>
+				<li><a href="products.html">Our Products</a></li>
+				<li><a href="tickets_order_form.html">Party Tickets</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<!-- main content starts -->
+		<main>
+			<!-- sidebar starts -->
+			<aside>
+				<ul>
+					<li><a href="products/props.html">Props</a></li>
+					<li><a href="products/costumes.html">Costumes</a></li>
+					<li><a href="products/special.html">Special FX</a></li>
+					<li><a href="products/masks.html">Masks</a></li>
+				</ul>
+			</aside>
+
+			<!-- the main section of the content starts -->
+			<section>
+				<h1>Buy Tickets for a Halloween Party</h1>
+				
+				<!-- the order form goes here -->
+				<form name="order_form" action="place_order.html" method="post">
+				<fieldset>
+				<!-- member information fieldset -->
+				<legend>Member Information</legend>
+				<label for="email">Email-ID:</label>
+				<input type="email" title="Enter your email id"  placeholder="someone@example.com" id="email" name="email" required  autofocus/><br>
+				<label for="fname" >FirstName:</label>
+				<input type="text" title="Enter your firstname "  placeholder="First Name" id="fname" name="fname" required   /><br>
+				<label for="lname" >LastName:</label>
+				<input type="text"  title="Enter your lastname" placeholder="Last Name" id="lname" name="lname" required   /><br>
+				<label for="address" >Address:</label>
+				<input type="text" placeholder="Address" id="address" name="address" /><br>
+				<label for="city" >City:</label>
+				<input type="text" placeholder="Eg: Toronto" id="city" name="city" required   /><br>
+				<label for="province" >Province:</label>
+				<input type="text"  title="2 characters Code "  placeholder="2 characters Code (eg: ON)" id="province" name="province" pattern="[A-Za-z]{2}"   required />
+				<label for="postal_code" >Postal Code:</label>
+				<input type="text"  title="6 characters"  placeholder="6 characters (eg: T1H 3R4)" id="postal_code" name="postal_code" pattern="[0-9A-Za-z]{6}"   required />
+				<label for="phone_number" >Phone Number:</label>
+				<input type="number" placeholder="eg: 999-999-9999" id="phone_number" name="phone_number" />
+				
+				</fieldset>
+
+				<fieldset>
+				<!-- order information fieldset -->
+				<legend>Ordering Information</legend>
+
+				<label for="party">Party:</label>
+				<!-- select input type -->
+				<select name ="party" id="party">
+				<option value="Fang-tastic Feast">Fang-tastic Feast</option>
+				<option value="Fright Night">Fright Night</option>
+				<option value="Ghouls' Night Out">Ghouls' Night Out</option>
+				<option value="Monster Mash">Monster Mash</option>
+				</select><br>
+
+				<label for="order">Order Type:</label>
+				<select name ="order" id="order">
+				<!-- select input type -->
+				<option value="Member Package">Member Package</option>
+				<option value="Donor Package">Donor Package</option>
+				<option value="Single Tickets">Single Tickets</option>
+				</select><br>
+
+				<label for="ticket">Number of Tickets:</label>
+				<input type="number" name="ticket" placeholder="Number of single tickets" id="ticket" /><br>
+
+				
+				</fieldset>
+
+				<fieldset>
+				<!-- payment method -->
+				<legend>Payment Method</legend>
+				<label for="bill_me" class="payment" >Bill Me:</label>
+				<input type="radio" value="Bill Me" name="payment" id="bill_me" class="paymentinput" />  
+				<label for="credit_card" class="payment" >Credit Card:</label> 
+				<input type="radio" value="Credit Card" name="payment" id="credit_card" class="paymentinput"  /> 
+				</fieldset>
+
+				<fieldset>
+				<!-- credit card information -->
+				<legend>Credit Card Information</legend>
+				 <label for="card">Card Type:</label>
+				<select name ="card">
+				<option value="Visa">Visa</option>
+				<option value="Master Card">Master Card</option>
+				<option value="Discover">Discover</option>
+				</select> 
+
+				<!-- card number -->
+				<label for="cnumber" >Card Number:</label>
+				<input type="number"  placeholder="16 Digits" name="cnumber" maxlength="16" minlength="16"  required /><br>
+
+				<!-- expiration date -->
+					<label for="expiry_month">Expiration Date:</label>
+				<select name="expiry_month" id="expiry_month" >
+				<option value="January" selected >January</option>
+				<option value="February">February</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+				</select>
+
+				<!-- expiry year -->
+				<select name="expiry_year" id="expiry_year">
+				<option value="2015" selected>2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+				
+				</select>
+
+				</fieldset>
+
+				<fieldset>
+				<!-- Submit order fieldset -->
+				<legend>Submit Your Order</legend>
+				<input class="buttons"  type="reset" name="reset" value="Reset Fields">
+				<input class="buttons" type="submit" name="submit" value="Submit">
+				</fieldset>
+
+				</form>
+			</section>
+		</main>
+
+		<!-- footer starts -->
+		<footer>
+			<p>&copy; 2020 Harshpreet Singh Dhillon</p>
+		</footer>
+	</body>
+</html>
